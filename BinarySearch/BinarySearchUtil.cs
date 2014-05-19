@@ -42,7 +42,7 @@ namespace BinarySearch
 
         private int PerformBinaryChop()
         {
-            if (_number > _largestNumber)
+            if (_array[_index] > _largestNumber)
             {
                 throw new ArgumentException("Array not in ascending order");
             }
