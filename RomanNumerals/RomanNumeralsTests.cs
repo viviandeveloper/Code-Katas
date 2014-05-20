@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using NUnit.Framework;
@@ -21,7 +22,13 @@ namespace RomanNumerals
         [TestCase(new object[] { 1956 }, TestName = "Convert 1956", Result = "MCMLVI")]
         public string ConvertNumber(int number)
         {
-            return RomanNumeralsConverter.Convert(Convert.ToUInt32(number));
+            Debug.WriteLine(number);
+
+            var result = RomanNumeralsConverter.Convert(number);
+
+            Debug.WriteLine(result);
+
+            return result;
         }
     }
 }
