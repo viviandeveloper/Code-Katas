@@ -20,11 +20,11 @@ namespace RomanNumerals
         [TestCase(new object[]{1000}, TestName = "Convert one thousand", Result = "M")]
         [TestCase(new object[] { 1732 }, TestName = "Convert 1732", Result = "MDCCXXXII")]
         [TestCase(new object[] { 1956 }, TestName = "Convert 1956", Result = "MCMLVI")]
-        public string ConvertNumber(int number)
+        public string WesternArabicToRoman(int number)
         {
             Debug.WriteLine(number);
 
-            var result = RomanNumeralsConverter.Convert(number);
+            var result = NumberConverter.WesternArabicToRoman(number);
 
             Debug.WriteLine(result);
 
